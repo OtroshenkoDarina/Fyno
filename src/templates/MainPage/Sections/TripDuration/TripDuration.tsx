@@ -1,4 +1,4 @@
-import React, {RefObject, useEffect, useRef, useState} from 'react';
+import React, {RefObject, useRef, useState} from 'react';
 import styles from './styles.module.scss'
 import plus from "../../../../assets/images/symbols/plus.svg";
 import Button from "../../../../components/Button/Button";
@@ -76,7 +76,7 @@ const TripDuration: React.FC<TripDurationProps> = ({regionRef}) => {
                 <div className={styles.summary_data}>
                     <div className={styles.summary_data_item}>
                         <p className={styles.summary_data_subtitle}>Trip duration</p>
-                        <p className={styles.summary_data_text}>7 days</p>
+                        <p className={styles.summary_data_text}>{duration}</p>
                     </div>
 
                     <div className={styles.summary_data_item}>
