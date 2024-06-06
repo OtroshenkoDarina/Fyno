@@ -10,16 +10,16 @@ const FlightSelection = () => {
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <Input value={'Reykjavík, KEF'} setValue={() => null} notEditable maxWidth={'179px'}/>
+                <Input disabled value={'Reykjavík, KEF'} setValue={() => null} notEditable maxWidth={'179px'}/>
                 <div>
                     <img src={planeImg} alt={'flight'}/>
                 </div>
-                <Input value={'San Francisco, SFO'} setValue={() => null} notEditable maxWidth={'179px'}/>
+                <Input disabled value={'San Francisco, SFO'} setValue={() => null} notEditable maxWidth={'179px'}/>
             </div>
             <div className={styles.wrapper}>
-                <Input image={calendarImg} value={'Jul 03 – Jul 11'} setValue={() => null} notEditable
-                       maxWidth={'157px'}/>
-                <Input image={personImg} value={'2'} setValue={() => null} notEditable maxWidth={'70px'}/>
+                <Input disabled image={calendarImg} value={'Jul 03 – Jul 11'} setValue={() => null} notEditable
+                       maxWidth={'165px'}/>
+                <Input disabled image={personImg} value={'2'} setValue={() => null} notEditable maxWidth={'70px'}/>
             </div>
         </div>
     );

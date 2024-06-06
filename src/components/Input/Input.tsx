@@ -7,7 +7,8 @@ interface InputProps {
     value: string;
     setValue: ChangeEventHandler<HTMLInputElement>;
     notEditable?: boolean,
-    maxWidth?: string
+    maxWidth?: string,
+    disabled?: boolean
 }
 
 const Input: React.FC<InputProps> = ({
@@ -15,7 +16,8 @@ const Input: React.FC<InputProps> = ({
                                          value,
                                          setValue,
                                          notEditable,
-                                         maxWidth = '100%'
+                                         maxWidth = '100%',
+                                         disabled
                                      }) => {
     return (
         <div
@@ -23,7 +25,7 @@ const Input: React.FC<InputProps> = ({
             style={{maxWidth}}
         >
             {!!image && <img src={image} alt={''}/>}
-            <input value={value} onChange={setValue}/>
+            <input disabled={disabled} value={value} onChange={setValue}/>
         </div>
     );
 };
