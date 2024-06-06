@@ -6,6 +6,7 @@ import planImg from '../../../../assets/images/symbols/plan.svg'
 import CustomSlider from "../../../../components/CustomSlider/CustomSlider";
 import {useNavigate} from 'react-router-dom'
 import {pathList} from "../../../../routes/path";
+import useWidowDimensions from "../../../../hooks/dom/useWidowDimensions";
 
 interface RegionPlanProps {
     regionData: RegionData
@@ -13,6 +14,7 @@ interface RegionPlanProps {
 
 const RegionPlan: React.FC<RegionPlanProps> = ({regionData}) => {
     const navigate = useNavigate()
+    const widowDimensions = useWidowDimensions()
 
     const onClickHighlights = () => navigate(pathList.highlightsNavigation + regionData?.id?.toString())
 
@@ -32,7 +34,7 @@ const RegionPlan: React.FC<RegionPlanProps> = ({regionData}) => {
                 <li className={styles.stepProgressItem}>
                     <div className={styles.subheader}>
                         <h3>Region highlights</h3>
-                        <Button text={'Show daily plan'} image={planImg} onClick={onClickHighlights}/>
+                        <Button text={widowDimensions?.width <= 400 ? '' : 'Show daily plan'} image={planImg} onClick={onClickHighlights}/>
                     </div>
 
                     <CustomSlider data={regionData?.highlights}/>

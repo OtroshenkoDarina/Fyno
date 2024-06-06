@@ -6,6 +6,11 @@
   width: 100%;
   padding: 12px 0;
   box-sizing: border-box;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
 }
 
 .highlightBlock_left {
@@ -13,6 +18,9 @@
   align-items: center;
   justify-content: flex-start;
   gap: 24px;
+  @media (max-width: 500px) {
+    align-items: flex-end;
+  }
 }
 
 .highlightBlock_right {
@@ -20,6 +28,12 @@
   align-items: center;
   justify-content: flex-end;
   gap: 8px;
+
+  @media (max-width: 500px) {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
 
   img {
     cursor: pointer
@@ -39,7 +53,10 @@
   line-height: 24px;
   letter-spacing: -0.40799999237060547px;
   margin: 0 0 8px;
-  color: rgba(0, 0, 0, 1)
+  color: rgba(0, 0, 0, 1);
+  @media (max-width: 330px) {
+    font-size: 14px;
+  }
 }
 
 .highlightBlock_pick {
@@ -50,6 +67,10 @@
   letter-spacing: -0.07800000160932541px;
   color: rgba(60, 60, 67, 0.8);
   margin: 0 0 8px;
+  @media (max-width: 330px) {
+    font-size: 12px;
+    padding: 0
+  }
 }
 
 .highlightBlock_desc {
@@ -59,4 +80,7 @@
   letter-spacing: -0.20000000298023224px;
   margin: 0;
   color: rgba(60, 60, 67, 0.8);
+  @media (max-width: 330px) {
+    font-size: 12px;
+  }
 }

@@ -11,12 +11,14 @@ import dots from '../../assets/images/symbols/dots.svg'
 import pathImg from '../../assets/images/symbols/path.svg'
 import cn from "classnames";
 import {pathList} from "../../routes/path";
+import useWindowDimensions from "../../hooks/dom/useWidowDimensions";
 
 const HighlightsPage = () => {
     const [highlightData, setHighlightData] = useState<Highlight[]>([])
 
     const params = useParams()
     const navigate = useNavigate()
+    const windowDimensions = useWindowDimensions()
 
     const setBodyColor = (color: string) => document.body.style.background = color
     const onClickMain = () => navigate(pathList.mainPage)
@@ -44,7 +46,7 @@ const HighlightsPage = () => {
                     <li className={styles.stepProgressItem}>
                         <div className={styles.header}>
                             <h3>2 days plan</h3>
-                            <Button text={'Show highlights'} image={stars} onClick={onClickMain}/>
+                            <Button text={windowDimensions?.width <= 340 ? '' : 'Show highlights'} image={stars} onClick={onClickMain}/>
                         </div>
                     </li>
 

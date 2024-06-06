@@ -53,7 +53,9 @@ const TripDuration: React.FC<TripDurationProps> = ({regionRef}) => {
                         />}
                     </div>
                 </div>
-                <Button text={'Create'} isRounded image={plus}/>
+                <div className={styles.duration_create}>
+                    <Button text={'Create'} isRounded image={plus}/>
+                </div>
             </div>
 
             <div className={styles.images_wrapper}>
