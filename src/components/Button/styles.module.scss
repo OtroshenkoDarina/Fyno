@@ -1,0 +1,29 @@
+.button {
+  font-family: 'SF Pro', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.10000000149011612px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0px 0px 0px 0.5px rgba(151, 151, 151, 0.3);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.isRounded {
+  border-radius: 16px;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}

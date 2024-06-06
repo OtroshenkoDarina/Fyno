@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  gap: 16px;
+  border-radius: 16px;
+  background: rgba(240, 244, 253, 1);
+  border: 1px solid rgba(220, 227, 246, 0.5);
+  box-shadow: 0px 0px 0px 0.5px rgba(204, 215, 241, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
